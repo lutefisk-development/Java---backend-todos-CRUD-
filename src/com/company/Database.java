@@ -168,7 +168,8 @@ public class Database {
     * */
     public void deleteTodo(int id) {
         // only delete todo with a id
-        if(id < 1) {
+        Todo todo = getTodoById(id);
+        if(todo.getId() < 1) {
             System.out.println("Must have an id");
             return;
         }
